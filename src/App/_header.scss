@@ -1,0 +1,8 @@
+.header{
+  background-color: red ;
+  display: flex;
+  &ulist{
+    display: flex;
+    flex-direction: row;
+  }
+}
