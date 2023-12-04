@@ -1,8 +1,98 @@
-.header{
-  background-color: red ;
+@import "src/colors, btns, fonts/_colors.scss";
+@import "/src/colors, btns, fonts/_fonts.scss";
+
+.logo__img {
+  position: relative;
+  height: 80px;
+}
+
+.header {
+  background-color: $color-primary;
+  box-shadow: 7px 7px 15px -8px $color-primary-shadow;
   display: flex;
-  &ulist{
+  height: 130px;
+  width: 100%;
+  padding: 1%;
+  justify-content: center;
+  align-items: center;
+  color: $color-white;
+  text-transform: uppercase;
+  font-size: 25px;
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+
+    .logo {
+      text-align: center;
+    }
+
+    .logo__img {
+      margin-bottom: 10px;
+    }
+
+    &__ulist {
+      gap: 10px;
+      margin-top: 20px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__list {
+      margin: 5px;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 550px) {
+    font-size: 20px;
+  }
+  @media (max-width: 478px) {
+    font-size: 16px;
+    flex-direction: column;
+    gap: 0;
+    font-weight: bold;
+  }
+  @media (max-width: 412px) {
+
+  }
+
+  &__ulist {
+    list-style: none;
     display: flex;
     flex-direction: row;
+    gap: 30px;
+    padding: 0;
+
+    @media (max-width: 550px) {
+      gap:15px
+    }
   }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__list {
+    cursor: pointer;
+
+    &:hover {
+      border: 2px solid $color-primary-hover;
+      border-radius: 50%;
+    }
+  }
+}
+.logo__background{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg); // Obróć o 45 stopni
+    width: 40px; // Ustaw szerokość rombu
+    height: 40px; // Ustaw wysokość rombu
+    background-color: $color-white; // Ustaw kolor tła rombu
+    z-index: -1; // Umieść romb pod obrazem
+
 }

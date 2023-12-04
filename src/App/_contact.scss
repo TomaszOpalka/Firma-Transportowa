@@ -1,0 +1,97 @@
+@import "src/colors, btns, fonts/_colors.scss";
+@import "/src/colors, btns, fonts/_fonts.scss";
+
+.container__contact {
+  max-width: 1350px;
+  min-height: 700px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: scale-in-center 0.2s ease-in-out;
+
+  @keyframes scale-in-center {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  border-radius: 5px;
+  background-color: $color-light-grey;
+
+  @media (max-width: 950px) {
+    width: 500px;
+    height: 200px;
+    justify-content: center;
+
+  }
+}
+
+.contact__empty {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+
+  &-redish {
+    background-color: $color-redish;
+  }
+  &-green {
+    background-color: $color-green;
+  }
+  &-blue {
+    background-color: $color-primary-shadow;
+  }
+  @media (max-width: 950px) {
+    display: none;
+  }
+}
+
+.contact--text {
+  margin: 20px;
+
+  &-tel {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -10%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 10px solid transparent;
+      border-top-color: $color-redish;
+      visibility: hidden;
+      transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+    }
+
+    &::after {
+      content: "Wciśnij skopiuj i zadzwoń";
+      position: absolute;
+      top: -80%;
+      left: 9%;
+      background-color: $color-redish;
+      color: #fff;
+      padding: 10px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+      z-index: 1;
+    }
+
+    &:hover::before,&:hover::after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
