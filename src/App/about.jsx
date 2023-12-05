@@ -5,9 +5,10 @@ function About(){
 
     return(
         <>
+            <div className='container'>
             <div className='container__about'>
                 <div className='about__me'>
-                    <img className='about__me-img' src='/src/images/KMT logo PNG bez nazwy.png'/>
+                    <img className='about__me-img' src='/src/images/KMT logo PNG bez nazwy.png' alt='moje zdjęcie profilowe'/>
                     <div className='about__me-text'>
                     <h1>Cześć tu Krystian!</h1>
                         <p>Wspólnie z Bratem tworzymy firmę transportową, pomagamy w wszelkiego rodzaju przeprowadzkach,
@@ -21,7 +22,7 @@ function About(){
                         </p>
                         <br/>
                         <p>
-                            Do każdego zamówienia podchodzimy indywidualnie dlatego zachęcamy, kontaktu przez formularz mailowego, oraz telefonicznego.
+                            Do każdego zamówienia podchodzimy indywidualnie dlatego zachęcamy, kontaktu przez formularz, mail lub telefonicznego.
                             <Link to="/contact">KONTAKT</Link>
                         </p>
                     </div>
@@ -33,20 +34,23 @@ function About(){
                         o wymiarach
 
                     </p>
-                    <p>
-                        spalanie ... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo quas, reprehenderit! A distinctio facilis hic.
-                    </p>
+
+                        <h3>Szerokość 223cm</h3>
+                        <h3> Wysokość 220cm</h3>
+                        <h3>  Długość 491cm</h3>
+
 
 
                     </div>
                     <div className="about__cars">
-                        <img className='about__cars-img' src='/src/images/KMT1.jpg'/>
-                        <img className='about__cars-img' src='/src/images/KMT2.jpg'/>
-                        <img className='about__cars-img' src='/src/images/KMT3.jpg'/>
-                        <img className='about__cars-img' src='/src/images/KMT4.jpg'/>
+                        <img className='about__cars-img' src='/src/images/KMT1.jpg' alt="mój środek transportu iveco"/>
+                        <img className='about__cars-img' src='/src/images/KMT2.jpg' alt="iveco białe"/>
+                        <img className='about__cars-img' src='/src/images/KMT3.jpg' alt="iveco z tyłu"/>
+                        <img className='about__cars-img' src='/src/images/KMT4.jpg' alt="kierowca bez kolizyjny"/>
                     </div>
                 </div>
             </div>
+        </div>
         </>
     )
 }

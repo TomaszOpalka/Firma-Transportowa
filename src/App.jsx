@@ -10,11 +10,11 @@ import {
     Outlet
 } from 'react-router-dom';
 import Header from  "./App/header.jsx";
-import Form from "./App/form.jsx";
 import Contact from "./App/contact.jsx";
 import About from "./App/about.jsx";
 import Gallery from "./App/gallery.jsx";
 import Footer from "./App/footer.jsx";
+import Mainpage from "./App/mainpage.jsx";
 
 
 function App() {
@@ -23,11 +23,11 @@ function App() {
     <HashRouter>
         <Header/>
            <Routes>
-            <Route path="/" element={<Form/>}/>
-               <Route path='/form' element={<Form/>}/>
+            <Route path="/" element={<Mainpage/>}/>
+               <Route path='/mainpage' element={<Mainpage/>}/>
                <Route path='/contact' element={<Contact/>}/>
                <Route path='/about' element={<About/>}/>
-               <Route path='/gallery' element={<Gallery/>}/>
+               {/*<Route path='/gallery' element={<Gallery/>}/>*/}
 
 
             </Routes>

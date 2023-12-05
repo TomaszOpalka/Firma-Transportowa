@@ -1,0 +1,23 @@
+@import "src/colors, btns, fonts/_colors.scss";
+@import "/src/colors, btns, fonts/_fonts.scss";
+
+.container__mainpage{
+  display: flex;
+  flex-direction: column;
+}
+.mainpage-text{
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  //margin-top: 50px;
+  margin: 40px auto;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background-color: $color-light-background;
+  border-radius: 15px;
+  box-shadow: 10px 20px 45px 6px rgba(222, 231, 237, 1);
+}
+.phone-number{
+  color: $color-redish;
+}

@@ -18,10 +18,10 @@ function Header() {
                     {/*<img className="logo__img" src="/src/images/KMT logo PNG.png"></img>*/}
             </div>
             <ul className='header__ulist'>
-                <li className="header__list"><Link className="header__link" to="/form"> Strona główna</Link> </li>
+                <li className="header__list"><Link className="header__link" to="/mainpage"> Strona główna</Link> </li>
                 <li className="header__list"><Link className="header__link" to="/about">o firmie</Link>  </li>
                 <li className="header__list"><Link className="header__link" to="/contact"> kontakt</Link> </li>
-                <li className="header__list"><Link className="header__link" to="/gallery">galeria</Link>  </li>
+                {/*<li className="header__list"><Link className="header__link" to="/gallery">galeria</Link>  </li>*/}
             </ul>
         </div>
     );
