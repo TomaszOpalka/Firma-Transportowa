@@ -1,6 +1,8 @@
 import React from 'react';
 import './_about.scss';
 import {Link} from "react-router-dom";
+import "/public/images"
+
 function About(){
 
     return(
