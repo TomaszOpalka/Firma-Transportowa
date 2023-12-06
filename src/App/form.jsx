@@ -55,8 +55,8 @@ const Form = () => {
             {/*    </select>*/}
             {/*</label>*/}
 
-            <label className='form-label'>
-                ilość osób do pomocy  :
+            <label className='form-label-peaple'>
+                ilość osób do pomocy:
 
                 <select name="peaple" value={selectedPeaple}
                         onChange={e => setSelectedPeaple(e.target.value)}>

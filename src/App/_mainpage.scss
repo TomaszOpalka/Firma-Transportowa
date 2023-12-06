@@ -6,6 +6,7 @@
   flex-direction: column;
 }
 .mainpage-text{
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   width: 95%;
@@ -17,6 +18,11 @@
   background-color: $color-light-background;
   border-radius: 15px;
   box-shadow: 10px 20px 45px 6px rgba(222, 231, 237, 1);
+
+  @media (max-width: 500px) {
+    padding: 5px;
+
+  }
 }
 .phone-number{
   color: $color-redish;

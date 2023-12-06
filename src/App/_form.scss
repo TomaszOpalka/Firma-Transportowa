@@ -20,7 +20,16 @@
 
 
   &-label{
-    margin: 8px auto;
+    margin: 5px auto;
+
+    &-peaple{
+      @media (max-width: 440px) {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+      }
+    }
   }
   &-input{
     width: 35%;
@@ -77,6 +86,9 @@ select {
   height: 30px;
   border: 1px solid #333;
   text-align: center;
+  @media (max-width: 440px) {
+    width: 50%;
+  }
 
   &.left {
     border-radius: 50px 0 0 50px;
