@@ -9,14 +9,14 @@ import {
     NavLink,
     Outlet
 } from 'react-router-dom';
-import 'public/images'
+import kmtlogo from '/public/images/KMT logo Negatyw PNG.png'
 
 
 function Header() {
     return (
         <div className='header'>
             <div className="logo">
-                <img className="logo__img" src={`${import.meta.env.VITE_PUBLIC_URL}/images/KMT logo Negatyw PNG.png`} alt="Logo KMT" />
+                <img className="logo__img" src={kmtlogo} alt="Logo KMT" />
                     {/*<img className="logo__img" src="/src/images/KMT logo PNG.png"></img>*/}
             </div>
             <ul className='header__ulist'>
