@@ -13,7 +13,7 @@ function Mainpage(){
                         zamówienia podchodzimy indywidualnie. Zapraszamy do kontaktu poprzez formularz poniżej lub jeśli sprawa
                         nie cierpi zwłoki dzwoń, może akurat będę dostępny albo w okolicy.
                     </p>
-                    <p className='phone-number'>+48669108937</p>
+                    <p className='phone-number'>+48731167636</p>
                 </div>
             <Form/>
             </div>

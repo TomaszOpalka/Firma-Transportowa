@@ -3,7 +3,7 @@ import './_contact.scss';
 
 
 function Contact(){
-    const phoneNumber = '+48669108937'; // Twój numer telefonu
+    const phoneNumber = '+48731167636'; // Twój numer telefonu
 
     const handlePhoneClick = async () => {
         try {

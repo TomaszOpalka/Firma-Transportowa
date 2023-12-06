@@ -12,7 +12,7 @@ import {
 import Header from  "./App/header.jsx";
 import Contact from "./App/contact.jsx";
 import About from "./App/about.jsx";
-import Gallery from "./App/gallery.jsx";
+// import Gallery from "./App/gallery.jsx";
 import Footer from "./App/footer.jsx";
 import Mainpage from "./App/mainpage.jsx";
 
