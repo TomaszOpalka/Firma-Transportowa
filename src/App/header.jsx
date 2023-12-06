@@ -9,6 +9,7 @@ import {
     NavLink,
     Outlet
 } from 'react-router-dom';
+import 'public/images'
 
 
 function Header() {
