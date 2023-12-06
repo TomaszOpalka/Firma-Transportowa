@@ -14,7 +14,7 @@ function Header() {
     return (
         <div className='header'>
             <div className="logo">
-                <img className="logo__img" src={process.env.PUBLIC_URL + "/src/images/KMT logo Negatyw PNG.png"}/>
+                <img className="logo__img" src={process.env.PUBLIC_URL + "/public/images/KMT logo Negatyw PNG.png"}/>
                     {/*<img className="logo__img" src="/src/images/KMT logo PNG.png"></img>*/}
             </div>
             <ul className='header__ulist'>
