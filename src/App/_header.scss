@@ -5,6 +5,8 @@
   position: relative;
   height: 85px;
   font-weight: bold;
+  animation: logoanimation 35s ease 0s infinite normal forwards;
+
   @media (max-width: 650px) {
   height: 120px;
     margin-bottom: 0;
@@ -24,6 +26,7 @@
   text-transform: uppercase;
   font-size: 35px;
   font-weight: 400;
+  text-shadow: 0 0 1px black;
 
   @media (max-width: 650px) {
     flex-direction: column;
@@ -102,4 +105,51 @@
     background-color: $color-white; // Ustaw kolor tła rombu
     z-index: -1; // Umieść romb pod obrazem
 
+}
+
+@keyframes logoanimation {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 1;
+    transform: translateX(-48px);
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  40% {
+    animation-timing-function: ease-in;
+    transform: translateX(-26px);
+  }
+
+  65% {
+    animation-timing-function: ease-in;
+    transform: translateX(-13px);
+  }
+
+  82% {
+    animation-timing-function: ease-in;
+    transform: translateX(-6.5px);
+  }
+
+  93% {
+    animation-timing-function: ease-in;
+    transform: translateX(-4px);
+  }
+
+  25%,
+  55%,
+  75%,
+  87%,
+  98% {
+    animation-timing-function: ease-out;
+    transform: translateX(0px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
