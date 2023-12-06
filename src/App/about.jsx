@@ -1,7 +1,10 @@
 import React from 'react';
 import './_about.scss';
 import {Link} from "react-router-dom";
-import "/public/images"
+import kmt1 from '/public/images/KMT1.jpg'
+import kmt2 from '/public/images/KMT2.jpg'
+import kmt3 from '/public/images/KMT3.jpg'
+import kmt4 from '/public/images/KMT4.jpg'
 
 function About(){
 
@@ -45,10 +48,10 @@ function About(){
 
                     </div>
                     <div className="about__cars">
-                        <img className='about__cars-img' src='/public/images/KMT1.jpg' alt="mój środek transportu iveco"/>
-                        <img className='about__cars-img' src='/public/images/KMT2.jpg' alt="iveco białe"/>
-                        <img className='about__cars-img' src='/public/images/KMT3.jpg' alt="iveco z tyłu"/>
-                        <img className='about__cars-img' src='/public/images/KMT4.jpg' alt="kierowca bez kolizyjny"/>
+                        <img className='about__cars-img' src={kmt1} alt="mój środek transportu iveco"/>
+                        <img className='about__cars-img' src={kmt2} alt="iveco białe"/>
+                        <img className='about__cars-img' src={kmt3} alt="iveco z tyłu"/>
+                        <img className='about__cars-img' src={kmt4} alt="kierowca bez kolizyjny"/>
                     </div>
                 </div>
             </div>
