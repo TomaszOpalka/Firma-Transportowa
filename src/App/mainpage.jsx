@@ -17,6 +17,15 @@ function Mainpage(){
                 </div>
             <Form/>
             </div>
+            <div className='klucze'><p>bus transport wrocław
+                przewóz rzeczy wrocław
+                transport do wrocław
+                transport wrocław
+                przewoz rzeczy wroclaw
+                transport mebli wrocław cennik
+                transport mebli wrocław olx
+                wrocław transport mebli
+                przeprowadzka cena za kilometr</p></div>
         </div>
     );
 }
