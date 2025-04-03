@@ -1,33 +1,94 @@
-@import "src/colors, btns, fonts/_colors.scss";
-@import "/src/colors, btns, fonts/_fonts.scss";
+// Importy zorganizowane
+@import "src/colors, btns, fonts/_colors";
+@import "src/colors, btns, fonts/_fonts";
 
-.container__mainpage{
-  display: flex;
-  flex-direction: column;
-}
-.mainpage-text{
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  width: 95%;
-  //margin-top: 50px;
-  margin: 40px auto;
-  align-items: center;
-  justify-content: center;
-  padding: 50px;
-  background-color: $color-light-background;
-  border-radius: 15px;
-  box-shadow: 10px 20px 45px 6px rgba(222, 231, 237, 1);
-
-  @media (max-width: 500px) {
-    padding: 5px;
-
+// Główny kontener strony
+.container {
+  &__mainpage {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(
+      to bottom,
+      rgba(245, 248, 250, 0.2) 0%,
+      rgba(255, 255, 255, 1) 100%
+    );
   }
 }
-.phone-number{
-  color: $color-redish;
+
+// Sekcja z tekstem głównym
+.mainpage {
+  &-text {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 60px;
+    background-color: $color-light-background;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(222, 231, 237, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    text-align: center;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 60px rgba(222, 231, 237, 0.8);
+    }
+
+    @media (max-width: 768px) {
+      padding: 40px 30px;
+      width: 90%;
+    }
+
+    @media (max-width: 500px) {
+      padding: 30px 20px;
+      margin: 30px auto;
+      border-radius: 15px;
+    }
+  }
+
+  // Stylizacja numeru telefonu
+  .phone-number {
+    color: $color-redish;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    padding: 0 5px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: $color-redish;
+      transition: width 0.3s ease;
+      -webkit-transition: width 0.3s ease;
+      -moz-transition: width 0.3s ease;
+      -ms-transition: width 0.3s ease;
+      -o-transition: width 0.3s ease;
 }
 
-.klucze{
+    &:hover {
+      color: darken($color-redish, 10%);
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Elementy ukryte
+.klucze {
   display: none;
+  visibility: hidden;
+  opacity: 0;
 }

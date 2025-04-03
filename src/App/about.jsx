@@ -1,10 +1,11 @@
 import React from 'react';
 import './_about.scss';
 import {Link} from "react-router-dom";
-import kmt1 from '/public/images/KMT1.jpg'
-import kmt2 from '/public/images/KMT2.jpg'
-import kmt3 from '/public/images/KMT3.jpg'
-import kmt4 from '/public/images/KMT4.jpg'
+import kmt1 from '/images/KMT1.jpg'
+import kmt2 from '/images/KMT2.jpg'
+import kmt3 from '/images/KMT3.jpg'
+import kmt4 from '/images/KMT4.jpg'
+import Kmtlogo from '/images/KMT logo PNG bez nazwy.png'
 
 function About(){
 
@@ -13,10 +14,10 @@ function About(){
             <div className='container'>
             <div className='container__about'>
                 <div className='about__me'>
-                    <img className='about__me-img' src='/public/images/KMT logo PNG bez nazwy.png' alt='moje zdjęcie profilowe'/>
+                    <img className='about__me-img' src={Kmtlogo} alt='moje zdjęcie profilowe'/>
                     <div className='about__me-text'>
                     <h1>Cześć tu Krystian!</h1>
-                        <p>Wspólnie z Bratem tworzymy firmę transportową, pomagamy w wszelkiego rodzaju przeprowadzkach,
+                        <p>Cześć prowadzę działalnoś transportową, pomagam w wszelkiego rodzaju przeprowadzkach,
                             montażach mebli a także w przewożeniu przedmiotów o dużych gabaretach.
                             siedziba naszej firmy znajduje się w tętniącym życiem Wrocławiu.
                         </p>

@@ -1,81 +1,95 @@
+// Importy
 @import "src/colors, btns, fonts/_colors.scss";
-@import "/src/colors, btns, fonts/_fonts.scss";
+@import "src/colors, btns, fonts/_fonts.scss";
 
-
-.container__about{
-  max-width: 1350px;
-  margin: 0 auto;
-  padding: 0 20px;
+// Główne kontenery
+.container {
+  &__about {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
 }
 
-.about__me{
-  display: flex;
-  width: auto;
-  margin-top: 50px;
-  padding: 50px;
-
-  //niebieski odcień i zaokrąglenie
-  background-color: $color-light-background;
-  border-radius: 15px;
-  box-shadow: 10px 20px 45px 6px rgba(222, 231, 237, 1);
-
-  @media (max-width: 750px) {
-    flex-direction: column;
-    align-items: center;
-    padding: 5px;
-
-    &-img{
-      margin-bottom: 30px;
-    }
-
-  }
-  &-img{
-    height: 150px;
+// Sekcja "O mnie"
+.about {
+  &__me {
+    display: flex;
     width: auto;
-    border: 1px solid $color-black;
-    border-radius: 5px;
-
-    margin-right: 50px;
-
+    margin-top: 50px;
+    padding: 50px;
+    
+    background-color: $color-light-background;
+    border-radius: 15px;
+    box-shadow: 10px 20px 45px 6px rgba(222, 231, 237, 1);
+    
+    &-img {
+      height: 150px;
+      width: auto;
+      border: 1px solid $color-black;
+      border-radius: 5px;
+      margin-right: 50px;
+      object-fit: cover; // Dodane dla lepszego wyświetlania obrazka
+    }
+    
+    &-text {
+      flex: 1; // Zajmuje dostępną przestrzeń
+    }
+    
+    @media (max-width: 750px) {
+      flex-direction: column;
+      align-items: center;
+      padding: 25px;
+      
+      &-img {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
   }
-  &-text{
-    height: inherit;
+
+  // Sekcja "O nas"
+  &__us {
+    margin-top: 50px;
+    padding: 30px;
+    
+    background-color: $color-light-background;
+    border-radius: 15px;
+    box-shadow: 10px 20px 45px 6px rgba(222, 231, 237, 1);
+    
+    &-text {
+      max-width: 800px;
+      margin: 0 auto 50px;
+      text-align: center; // Dodane dla lepszego wyglądu tekstu
+    }
   }
-}
-.about__us{
 
-  margin-top: 50px;
-  padding: 30px;
-
-
-  //niebieski odcień i zaokrąglenie
-  background-color: $color-light-background;
-  border-radius: 15px;
-  box-shadow: 10px 20px 45px 6px rgba(222, 231, 237, 1);
-
-  &-text{
-    margin-bottom: 50px;
-    max-width: 800px;
-    margin: 0 auto
-  }
-}
-
-.about__cars{
-
-  &-img{
+  // Sekcja samochodów
+  &__cars {
+    display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 0 auto;
-    height: auto;
-    max-width: 45%;
-    position: relative;
-    left: 4%;
-  }
-  @media (max-width: 750px) {
+    gap: 20px; // Nowoczesny sposób na odstępy między elementami
+    margin-top: 50px;
+    
     &-img {
-      max-width: 100%;
-      left: 0;
-      padding: 5px;
+      height: auto;
+      width: calc(50% - 40px); // Uwzględnia odstęp
+      max-width: 45%;
+      border-radius: 8px;
+      transition: transform 0.3s ease; // Efekt hover
+      
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+    
+    @media (max-width: 750px) {
+      &-img {
+        width: 100%;
+        max-width: 100%;
+        margin: 10px 0;
+      }
     }
   }
 }
